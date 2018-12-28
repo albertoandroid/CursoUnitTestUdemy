@@ -1,5 +1,6 @@
 package com.androiddesdecero.testunitarios.mockitomvp;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -40,5 +41,17 @@ public class LoginPresenterTest {
         presenter.validadUser(view.getUserName(), view.getPassword());
         //4.- Verificar que la vista ejecuta el metodo Error
         verify(view).error();
+    }
+
+    @Test
+    public void shouldCallusuarioValidoWhenUserAndPasswordAreRightTest() throws Exception{
+        //2.- Nos permite programar un comprortamiento
+        when(view.getUserName()).thenReturn("alberto");
+        when(view.getPassword()).thenReturn("1234");
+        Assert.assertEquals("alberto", view.getUserName());
+        //3.- Ejecutamos un metodo
+        presenter.validadUser(view.getUserName(), view.getPassword());
+        //4.- Verificar que la vista ejecuta el metodo Error
+        verify(view).usuarioValido();
     }
 }
