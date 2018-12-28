@@ -62,6 +62,12 @@ public class CalculadoraTest {
 
     }
 
+    @Test
+    public void sumarTest(){
+        Assert.assertEquals(30, calculadora.sumar(10,20));
+    }
+
+
 
     @Test
     public void sumar() throws Exception {
