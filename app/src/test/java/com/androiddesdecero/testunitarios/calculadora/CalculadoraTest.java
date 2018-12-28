@@ -46,6 +46,23 @@ public class CalculadoraTest {
     restar(int a, int b)            |a = 7, b=4         |3
     restar(int a, int b)            |a = 10, b=20       |-10
     */
+
+    @Test
+    public void sumarTestExplicado(){
+        //Setup
+        Calculadora calculadoraPrueba = new Calculadora();
+        int resultadoExperado = 30;
+        int restuladoActual;
+        //Acción
+        restuladoActual = calculadoraPrueba.sumar(10, 20);
+        //Assert
+        //Assert.assertEquals(resultadoExperado, restuladoActual);
+        Assert.assertEquals(30, calculadoraPrueba.sumar(10,20));
+        System.out.println("Se ha ejecutado el test sumarTestExplicado()");
+
+    }
+
+
     @Test
     public void sumar() throws Exception {
     }
