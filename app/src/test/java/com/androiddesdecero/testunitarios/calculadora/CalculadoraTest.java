@@ -39,13 +39,6 @@ public class CalculadoraTest {
         System.out.println("Se ha ejecutado el test caculadoraNullTest()");
     }
 
-    /*
-    Método a Probar                 |      Entrada      |       Salida Experarada
-    sumar(int a, int b)             |a = 10, b=20       |30
-    sumar(int a, int b)             |a = 7, b=4         |11
-    restar(int a, int b)            |a = 7, b=4         |3
-    restar(int a, int b)            |a = 10, b=20       |-10
-    */
 
     @Test
     public void sumarTestExplicado(){
@@ -86,17 +79,50 @@ public class CalculadoraTest {
         Assert.assertEquals("a", "a");
     //    Assert.assertEquals("Esto es una prueba AssertEqucals con error fa no es a", "Fa", "a");
 
-        Assert.assertEquals(1, 1.4, 0.3);
+        Assert.assertEquals(1, 1.4, 0.5);
 
       //  Assert.fail("Fallo detectado Manuelmente");
     }
 
+
+
     @Test
     public void sumar() throws Exception {
+        //SetUp
+        int a = 10;
+        int b = 20;
+        int resutladoExperado = 30;
+        int resultado;
+        //Acción
+        resultado = calculadora.sumar(a,b);
+        //Assert
+        Assert.assertEquals(resutladoExperado, resultado);
     }
 
     @Test
-    public void restar() throws Exception {
+    public void sumar_ValidInput_ValidExpected_Test(){
+        Assert.assertEquals(11, calculadora.sumar(7,4));
+        System.out.println("Se ha ejecutado el test sumar_ValidInput_ValidExpected_Test()");
+    }
+
+    /*
+    Método a Probar                 |      Entrada      |       Salida Experarada
+    sumar(int a, int b)             |a = 10, b=20       |30
+    sumar(int a, int b)             |a = 7, b=4         |11
+    restar(int a, int b)            |a = 7, b=4         |3
+    restar(int a, int b)            |a = 10, b=20       |-10
+    */
+
+    @Test
+    public void restar_ValidInput_ValidExpeted_Test() throws Exception {
+        Assert.assertEquals(3, calculadora.restar(7,4));
+        System.out.println("Se ha ejecutado el test sumar_ValidInput_ValidExpected_Test()");
+    }
+
+    @Test
+    public void restar_ValidInput_ValidNegativeExpeted_Test() throws Exception {
+        Assert.assertEquals(-10, calculadora.restar(10,20));
+        System.out.println("Se ha ejecutado el test restar_ValidInput_ValidNegativeExpeted_Test()");
     }
 
 }
