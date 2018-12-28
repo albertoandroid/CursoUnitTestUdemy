@@ -3,6 +3,7 @@ package com.androiddesdecero.testunitarios.calculadora;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -150,5 +151,16 @@ public class CalculadoraTest {
         System.out.println("Se ha ejecutado el test dividirPorCero_NoValidInput_ExpectedException_Test()");
     }
 
+    @Test(timeout = 600)
+    public void operacionLargaDuracion_TimeOut_Test(){
+        calculadora.operacionLargaDuracion();
+    }
+
+    @Ignore("Metodo no listo. Ignorar por ahora. Esperando solucionar la división por cero")
+    @Test
+    public void dividir_NotValidInput_Ignore_Test(){
+        Assert.assertEquals(2, calculadora.dividir(5,0));
+        System.out.println("Se ha ejecutado el test operacionLargaDuracion_TimeOut_Test()");
+    }
 
 }

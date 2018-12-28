@@ -41,4 +41,12 @@ public class Calculadora {
         resutado = numero1 / numero2;
         return resutado;
     }
+
+    public void operacionLargaDuracion(){
+        try{
+            Thread.sleep(1000);
+        }catch (Exception e){
+
+        }
+    }
 }
