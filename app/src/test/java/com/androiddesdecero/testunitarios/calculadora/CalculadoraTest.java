@@ -67,7 +67,29 @@ public class CalculadoraTest {
         Assert.assertEquals(30, calculadora.sumar(10,20));
     }
 
+    @Test
+    public void ejemploAssert(){
+        Assert.assertTrue(1==1);
+        Assert.assertFalse(1==2);
 
+        //Assert.assertNull(calculadora);
+        Assert.assertNotNull(calculadora);
+
+        Calculadora calculadora1 = new Calculadora();
+        Calculadora calculadora2 = new Calculadora();
+        Calculadora calculadora3 = calculadora1;
+
+     //   Assert.assertSame(calculadora1, calculadora2);
+        Assert.assertSame(calculadora1, calculadora3);
+        Assert.assertNotSame(calculadora1, calculadora2);
+
+        Assert.assertEquals("a", "a");
+    //    Assert.assertEquals("Esto es una prueba AssertEqucals con error fa no es a", "Fa", "a");
+
+        Assert.assertEquals(1, 1.4, 0.3);
+
+      //  Assert.fail("Fallo detectado Manuelmente");
+    }
 
     @Test
     public void sumar() throws Exception {
