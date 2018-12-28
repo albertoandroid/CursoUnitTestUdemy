@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PreUnitTestActivity"></activity>
+        <activity android:name=".PreUnitTestActivity" />
+        <activity android:name=".mockitomvp.LoginActivity"></activity>
     </application>
 
 </manifest>
