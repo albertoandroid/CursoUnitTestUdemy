@@ -28,4 +28,17 @@ public class Calculadora {
         resutado = numero1 - numero2;
         return resutado;
     }
+
+    public int dividir(int numero1, int numero2){
+        resutado = numero1 / numero2;
+        return resutado;
+    }
+
+    public int dividirPorCero(int numero1, int numero2){
+        if(numero2==0){
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
+        resutado = numero1 / numero2;
+        return resutado;
+    }
 }

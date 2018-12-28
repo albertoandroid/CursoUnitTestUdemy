@@ -125,4 +125,30 @@ public class CalculadoraTest {
         System.out.println("Se ha ejecutado el test restar_ValidInput_ValidNegativeExpeted_Test()");
     }
 
+    /*
+    Método a Probar                 |      Entrada      |       Salida Experarada
+    dividir(int a, int b)           |a = 4, b=2         |2
+    dividir(int a, int b)           |a = 4, b=0         |Excepción
+    */
+
+    @Test
+    public void dividir_ValidInput_ValidExpected_Test(){
+        Assert.assertEquals(2, calculadora.dividir(4,2));
+        System.out.println("Se ha ejecutado el test dividir_ValidInput_ValidExpected_Test()");
+    }
+
+    @Test
+    public void dividir_NotValidInput_Test(){
+        calculadora.dividir(5,0);
+        System.out.println("Se ha ejecutado el test dividir_NotValidInput_Test");
+        Assert.fail("Fallo detectado Manuelmente - No se puede dividir por Cero");
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void dividirPorCero_NoValidInput_ExpectedException_Test(){
+        calculadora.dividirPorCero(5,0);
+        System.out.println("Se ha ejecutado el test dividirPorCero_NoValidInput_ExpectedException_Test()");
+    }
+
+
 }
