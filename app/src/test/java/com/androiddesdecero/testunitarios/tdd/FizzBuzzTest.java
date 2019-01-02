@@ -1,5 +1,9 @@
 package com.androiddesdecero.testunitarios.tdd;
 
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -33,4 +37,16 @@ public class FizzBuzzTest {
     of(int numero)                            |numero = 100     |Buzz
     -----------------------------------------------------------------------------------------
     */
+
+    private FizzBuzz fizzBuzz;
+
+    @Before
+    public void setUp(){
+        fizzBuzz = new FizzBuzz();
+    }
+
+    @Test
+    public void of_0is0(){
+        Assert.assertEquals("0", fizzBuzz.of(0));
+    }
 }

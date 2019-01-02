@@ -6,5 +6,7 @@ package com.androiddesdecero.testunitarios.tdd;
 
 public class FizzBuzz {
 
-
+    public String of(int numero){
+        return "0";
+    }
 }
