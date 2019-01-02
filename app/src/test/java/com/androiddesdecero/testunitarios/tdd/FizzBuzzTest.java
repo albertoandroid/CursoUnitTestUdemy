@@ -74,4 +74,19 @@ public class FizzBuzzTest {
     public void of_6isFizz(){
         Assert.assertEquals("Fizz", fizzBuzz.of(6));
     }
+
+    @Test
+    public void of_10isBuzz(){
+        Assert.assertEquals("Buzz", fizzBuzz.of(10));
+    }
+
+    @Test
+    public void of_15isFizzBuzz(){
+        Assert.assertEquals("FizzBuzz", fizzBuzz.of(15));
+    }
+
+    @Test
+    public void of_100isBuzz(){
+        Assert.assertEquals("Buzz", fizzBuzz.of(100));
+    }
 }
