@@ -7,8 +7,16 @@ package com.androiddesdecero.testunitarios.tdd;
 public class FizzBuzz {
 
     public String of(int numero){
-        if(numero == 3){
+
+        if(numero == 0){
+            return "0";
+        }
+
+        if(numero % 3 == 0){
             return "Fizz";
+        }
+        if(numero == 5){
+            return "Buzz";
         }
         return String.valueOf(numero);
     }
