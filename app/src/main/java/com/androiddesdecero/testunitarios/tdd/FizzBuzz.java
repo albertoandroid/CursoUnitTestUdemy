@@ -12,15 +12,15 @@ public class FizzBuzz {
             return "0";
         }
 
-        if(numero % 3 == 0 && numero % 5 == 0){
-            return "FizzBuzz";
-        }
+        String texto = "";
+
         if(numero % 3 == 0){
-            return "Fizz";
+            texto += "Fizz";
         }
         if(numero % 5 == 0){
-            return "Buzz";
+            texto += "Buzz";
         }
-        return String.valueOf(numero);
+
+        return texto.isEmpty() ? String.valueOf(numero) : texto;
     }
 }
