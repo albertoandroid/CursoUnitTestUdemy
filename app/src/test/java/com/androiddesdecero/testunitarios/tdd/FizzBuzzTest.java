@@ -49,4 +49,19 @@ public class FizzBuzzTest {
     public void of_0is0(){
         Assert.assertEquals("0", fizzBuzz.of(0));
     }
+
+    @Test
+    public void of_1is1(){
+        Assert.assertEquals("1", fizzBuzz.of(1));
+    }
+
+    @Test
+    public void of_2is2(){
+        Assert.assertEquals("2", fizzBuzz.of(2));
+    }
+
+    @Test
+    public void of_3isFizz(){
+        Assert.assertEquals("Fizz", fizzBuzz.of(3));
+    }
 }
