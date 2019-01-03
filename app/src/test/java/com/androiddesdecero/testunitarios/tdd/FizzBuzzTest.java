@@ -9,6 +9,21 @@ import static org.junit.Assert.*;
 /**
  * Created by albertopalomarrobledo on 2/1/19.
  */
+/*
+Como implementar TDD en una empresa Real:
+1.- El product Manager escribe la historia de usuario
+2.- Se escriben todos los criterios de aceptación de esa historia de usuario.
+3.- Se coge el primer criterio de aceptación y se traduce a prueba unitaria.
+4.- Comprobamos que el test falla
+5.- Se escribe el código para hacer pasar el test
+6.- Se ejecutas todos nuestros test
+7.- Refactorizamos el código
+8.- Volvemos a pasar todas las pruebas
+Ventajas de TDD. El código esta testado de serie. Es decir no hay un método que no este testado antes de lanzar a producción.
+
+No hay código innecesario, ya que los test son códigos de uso que nos ha indicado nuestro director de proyecto.
+
+ */
 public class FizzBuzzTest {
 
 
